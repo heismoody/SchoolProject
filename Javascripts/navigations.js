@@ -5,4 +5,13 @@ $(document).ready(function () {
     $("#about").click(function(){
         $("#bodydiv").load("../pages/aboutschool.html")
     });
+    $("#gallery").click(function(){
+        $("#bodydiv").load("../pages/gallery.html")
+    });
+    $("#results").click(function(){
+        $("#bodydiv").load("../pages/results.html")
+    });
+    $("#news").click(function(){
+        $("#bodydiv").load("../pages/news.html")
+    });
 });
