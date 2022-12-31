@@ -18,3 +18,19 @@
     border: none;
     border-bottom: 2px solid;
 }
+
+.iconfb{
+    color: blue;
+}
+
+.icontw{
+    color: rgb(95, 95, 255);
+}
+
+.iconadd{
+    color: orangered;
+}
+
+.iconcal{
+    color: rgb(0, 0, 101);
+}
