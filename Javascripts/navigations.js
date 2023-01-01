@@ -17,4 +17,7 @@ $(document).ready(function () {
     $("#login").click(function(){
         $("#bodydiv").load("../pages/login.html")
     });
+    $("#teacherpanel").click(function(){
+        $("#bodydiv").load("../pages/teacherpanel.html")
+    });
 });
