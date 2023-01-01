@@ -14,4 +14,7 @@ $(document).ready(function () {
     $("#news").click(function(){
         $("#bodydiv").load("../pages/news.html")
     });
+    $("#login").click(function(){
+        $("#bodydiv").load("../pages/login.html")
+    });
 });
