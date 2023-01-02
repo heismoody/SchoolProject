@@ -30,7 +30,7 @@
         </div>
         <div class="w-100">
             <div class="row w-100 my-5" style="grid-gap: 40px;">
-                <div class="col d-flex align-items-center bg-white rounded-lg shadow" style="width: 10rem; grid-gap: 20px;">
+                <div class="col d-flex align-items-center bg-white rounded-lg shadow news" style="width: 10rem; grid-gap: 20px;">
                     <img src="https://cdn1.iconfinder.com/data/icons/document-std/512/newspaper-256.png"
                         style="width: 60px; height: 60px; margin: 10px 0 10px 10px;" alt="...">
                     <div class="card-body">
@@ -71,3 +71,11 @@
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function () {
+        $(".news").click(function () {
+            $("#bodydiv").load("../pages/newsadmin.html")
+        });
+        
+    })
+</script>
