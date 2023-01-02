@@ -20,4 +20,7 @@ $(document).ready(function () {
     $("#teacherpanel").click(function(){
         $("#bodydiv").load("../pages/teacherpanel.html")
     });
+    $("#adminpanel").click(function(){
+        $("#bodydiv").load("../pages/admindashboard.html")
+    });
 });
