@@ -37,14 +37,14 @@
                         <p class="card-text"><strong>NEWS</strong></p>
                     </div>
                 </div>
-                <div class="col d-flex align-items-center bg-white rounded-lg shadow" style="width: 10rem;">
+                <div class="col d-flex align-items-center bg-white rounded-lg shadow results" style="width: 10rem;">
                     <img src="https://cdn0.iconfinder.com/data/icons/education-flat-icons-vol-2/96/58-256.png"
                         style="width: 60px; height: 60px; margin: 10px 0 10px 10px;" alt="...">
                     <div class="card-body">
                         <p class="card-text"><strong>RESULTS</strong></p>
                     </div>
                 </div>
-                <div class="col d-flex align-items-center bg-white rounded-lg shadow" style="width: 10rem;">
+                <div class="col d-flex align-items-center bg-white rounded-lg shadow gallery" style="width: 10rem;">
                     <img src="https://cdn2.iconfinder.com/data/icons/xomo-basics/128/document-06-256.png"
                         style="width: 60px; height: 60px; margin: 10px 0 10px 10px;" alt="...">
                     <div class="card-body">
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="row w-100" style="grid-gap: 40px;">
-                <div class="col d-flex align-items-center bg-white rounded-lg shadow" style="width: 10rem;">
+                <div class="col d-flex align-items-center bg-white rounded-lg shadow application" style="width: 10rem;">
                     <img src="https://cdn0.iconfinder.com/data/icons/insurance-flat-unexpected-situations/512/Insurance_Policy-256.png"
                         style="width: 60px; height: 60px; margin: 10px 0 10px 10px;" alt="...">
                     <div class="card-body">
@@ -76,6 +76,14 @@
         $(".news").click(function () {
             $("#bodydiv").load("../pages/newsadmin.html")
         });
-        
+        $(".gallery").click(function () {
+            $("#bodydiv").load("../pages/galleryadmin.html")
+        });
+        $(".application").click(function () {
+            $("#bodydiv").load("../pages/applicationadmin.html")
+        });
+        $(".results").click(function () {
+            $("#bodydiv").load("../pages/teacherpanel.html")
+        });
     })
 </script>
