@@ -2,25 +2,26 @@ $(document).ready(function () {
     $("#home").click(function(){
         location.reload();
     });
-    $("#about").click(function(){
-        $("#bodydiv").load("../pages/aboutschool.html")
+    $("#about").click(function () {
+        alert("im testing out");
+        $("#bodydiv").load("./pages/aboutschool.html")
     });
     $("#gallery").click(function(){
-        $("#bodydiv").load("../pages/gallery.html")
+        $("#bodydiv").load("./pages/gallery.html")
     });
     $("#results").click(function(){
-        $("#bodydiv").load("../pages/results.html")
+        $("#bodydiv").load("./pages/results.html")
     });
     $("#news").click(function(){
-        $("#bodydiv").load("../pages/news.html")
+        $("#bodydiv").load("./pages/news.html")
     });
     $("#login").click(function(){
-        $("#bodydiv").load("../pages/login.html")
+        $("#bodydiv").load("./pages/login.html")
     });
     $("#teacherpanel").click(function(){
-        $("#bodydiv").load("../pages/teacherpanel.html")
+        $("#bodydiv").load("./pages/teacherpanel.html")
     });
     $("#adminpanel").click(function(){
-        $("#bodydiv").load("../pages/admindashboard.html")
+        $("#bodydiv").load("./pages/admindashboard.html")
     });
 });
