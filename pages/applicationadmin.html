@@ -35,10 +35,15 @@
         </div>
         <div class="w-100">
             <div class="w-50">
-                <form>
+                <form action="./php/middlewares/appmiddleware.php" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput"><strong>Name Of The Application Form</strong></label>
+                        <input type="text" class="form-control shadow" id="formGroupExampleInput"
+                            placeholder="Applicaton Name" name="apptitle">
+                    </div>
                     <div class="form-group">
                         <label for="exampleFormControlFile1"><strong>Attach Applicaton Form</strong></label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="appfile">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>

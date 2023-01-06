@@ -1,10 +1,10 @@
 <?php
 
- $conn = new mysqli('localhost', 'Administrator', 'zero123tech','schoolproject');
+$conn = new mysqli('localhost', 'Administrator', 'zero123tech','schoolproject');
 
-    if(! $conn )  
-    {  
+if(! $conn )  
+{  
     die('Could not connect: ' . mysqli_error());  
-    }
+}
 
 ?>
