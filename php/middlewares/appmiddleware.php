@@ -22,7 +22,7 @@
                     if(mysqli_query($conn, $sql)){
                         echo 'success';
                     }else{
-                        echo mysqli_error();
+                        echo mysqli_error($conn);
                     }
                 }else{
                     echo "sorry:file was not uploaded";
