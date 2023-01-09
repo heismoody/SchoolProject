@@ -4,7 +4,7 @@
     $newstitle = $_POST['newstitle'];
     $newsdescription = $_POST['newsdescription'];
 
-    $sql = "insert into NEWS (TITLE_NEWS,NEWS_DESC)
+    $sql = "insert into news (NEWS_TITLE,NEWS_DESCR)
     values ('$newstitle','$newsdescription')";
 
     if(mysqli_query($conn, $sql)){

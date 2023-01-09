@@ -1,5 +1,5 @@
 <?php
-    $filename = $_FILES['appfile']['name'];
+    $filename = strval($_FILES['appfile']['name']);
     $filetmp = $_FILES['appfile']['tmp_name'];
     $filesize = $_FILES['appfile']['size'];
     $fileerror = $_FILES['appfile']['error'];
@@ -16,7 +16,7 @@
                     include '../connections/connection.php';
 
                     $apptitle = $_POST['apptitle'];
-                    $sql = "insert into APPLICATIONS (APPLICATION_NAME,APP_FILE)
+                    $sql = "insert into applications (APP_NAME,APP_FILENAME)
                     values ('$apptitle','$filename')";
                     
                     if(mysqli_query($conn, $sql)){
