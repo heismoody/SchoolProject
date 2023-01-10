@@ -1,34 +1,31 @@
 <div class="d-flex justify-content-center w-100" style="background-color: rgb(233, 233, 233);">
     <div class="navwid d-flex align-items-center py-4">
-            <div class="bg-white rounded-pill d-flex justify-content-center align-items-center shadow mr-5"
-                style="width: 50px; height: 60vh;">
+        <div class="bg-white rounded-pill d-flex justify-content-center align-items-center shadow mr-5" style="width: 50px; height: 60vh;">
+            <div>
                 <div>
-                    <div>
-                        <img src="https://cdn3.iconfinder.com/data/icons/network-and-communications-8/32/network_home_house-256.png" class="iconsize my-4" alt="">
-                    </div>
-                    <div>
-                        <img src="https://cdn4.iconfinder.com/data/icons/firefighting-fire-safety-blue-line/64/445_fire-exit-emergency-escape-evacuate-256.png"
-                            class="iconsize" alt="">
-                    </div>
+                    <img src="https://cdn3.iconfinder.com/data/icons/network-and-communications-8/32/network_home_house-256.png" class="iconsize my-4" alt="">
+                </div>
+                <div>
+                    <img src="https://cdn4.iconfinder.com/data/icons/firefighting-fire-safety-blue-line/64/445_fire-exit-emergency-escape-evacuate-256.png" class="iconsize" alt="">
                 </div>
             </div>
-            <div>
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1"><strong>Examination Result Name</strong></label>
-                        <input type="email" class="form-control shadow" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            placeholder="Examination Name To Be posted">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1"><strong>Examination Result Class</strong></label>
-                        <input type="password" class="form-control shadow" id="exampleInputPassword1" placeholder="Examination Class To Be Posted">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleFormControlFile1"><strong>Attach Examination Result File</strong></label>
-                        <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-            </div>
+        </div>
+        <div>
+            <form action="./php/middlewares/resultmiddleware.php" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="formGroupExampleInput"><strong>Examination Result Name</strong></label>
+                    <input type="text" class="form-control shadow" id="formGroupExampleInput" placeholder="Examination Name To Be posted" name="resulttitle">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput"><strong>Examination Result Class</strong></label>
+                    <input type="text" class="form-control shadow" id="formGroupExampleInput" placeholder="Examination Class To Be Posted" name="resultclass">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlFile1"><strong>Attach Examination Result File</strong></label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1" name="resultfile">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
     </div>
 </div>

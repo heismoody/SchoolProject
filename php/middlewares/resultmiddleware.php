@@ -1,8 +1,8 @@
 <?php
-    $filename = strval($_FILES['newsfile']['name']);
-    $filetmp = $_FILES['newsfile']['tmp_name'];
-    $filesize = $_FILES['newsfile']['size'];
-    $fileerror = $_FILES['newsfile']['error'];
+    $filename = strval($_FILES['resultfile']['name']);
+    $filetmp = $_FILES['resultfile']['tmp_name'];
+    $filesize = $_FILES['resultfile']['size'];
+    $fileerror = $_FILES['resultfile']['error'];
 
     $fileext = explode('.', $filename);
     $fileactext = strtolower(end($fileext));
@@ -11,20 +11,20 @@
     if(in_array($fileactext, $allow)){
         if($fileerror === 0){
             if($filesize < 50000000){
-                $filelocation = "../../uploads/newsdocs/". $filename;
+                $filelocation = "../../uploads/resultdocs/". $filename;
                 if(move_uploaded_file($filetmp, $filelocation)){
                     include '../connections/connection.php';
 
-                    $newstitle = $_POST['newstitle'];
-                    $newsdescription = $_POST['newsdescription'];
+                    $resulttitle = $_POST['resulttitle'];
+                    $resultclass = $_POST['resultclass'];
 
-                    $sql = "insert into news (NEWS_TITLE,NEWS_DESCR,NEWS_THUMBNAME)
-                    values ('$newstitle','$newsdescription','$filename')";
+                    $sql = "insert into results (EXAM_NAME,CLASS_RESULT,RESULT_FILENAME)
+                    values ('$resulttitle','$resultclass','$filename')";
 
                     if(mysqli_query($conn, $sql)){
                         echo 'success';
                     }else{
-                        echo mysqli_error();
+                        echo mysqli_error($conn);
                     }
                 }else{
                     echo "sorry:file was not uploaded";
