@@ -38,6 +38,10 @@
                           <option>5</option>
                         </select>
                     </div>
+                    <?php
+                    $scanned = scandir("../uploads/gallery/");
+                    print_r($scanned);
+                    ?>
                     <div class="form-group ">
                         <label for="exampleFormControlFile1 "><strong>Attach Image To Be Posted</strong></label>
                         <input type="file " class="form-control-file " id="exampleFormControlFile1 ">
