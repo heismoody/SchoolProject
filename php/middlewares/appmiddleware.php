@@ -1,4 +1,16 @@
 <?php
+                    include '../connections/connection.php';
+
+                    $apptitle = $_POST['apptitle'];
+                    $sql = "insert into applications (APP_NAME,APP_FILENAME)
+                    values ('$apptitle','$filename')";
+                    
+                    if(mysqli_query($conn, $sql)){
+                        echo 'success';
+                    }else{
+                        echo mysqli_error($conn);
+                    }
+
     $filename = strval($_FILES['appfile']['name']);
     $filetmp = $_FILES['appfile']['tmp_name'];
     $filesize = $_FILES['appfile']['size'];
@@ -13,17 +25,7 @@
             if($filesize < 50000000){
                 $filelocation = "../../uploads/appdocs/". $filename;
                 if(move_uploaded_file($filetmp, $filelocation)){
-                    include '../connections/connection.php';
-
-                    $apptitle = $_POST['apptitle'];
-                    $sql = "insert into applications (APP_NAME,APP_FILENAME)
-                    values ('$apptitle','$filename')";
                     
-                    if(mysqli_query($conn, $sql)){
-                        echo 'success';
-                    }else{
-                        echo mysqli_error($conn);
-                    }
                 }else{
                     echo "sorry:file was not uploaded";
                 }
