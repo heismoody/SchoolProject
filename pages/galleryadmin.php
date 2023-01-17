@@ -28,34 +28,31 @@
         <div class="w-100 d-flex">
             <div class="w-50 mr-3">
                 <form action="./php/middlewares/gallerymiddleware.php" method="post" enctype="multipart/form-data">
-                    <div class=" form-group">
-                        <label for="exampleFormControlSelect1 "><strong>Choose Album To Post Image In</strong></label>
-                        <select class="form-control shadow " id="exampleFormControlSelect1" name="albumname">
-                          <option>Name of the album to post in</option>
-                          <option>2</option>
-                          <option>3</option>
-                          <option>4</option>
-                          <option>5</option>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1"><strong>Choose Album To Post Image In</strong></label>
+                        <select class="form-control shadow" id="exampleFormControlSelect1" name="albumname">
+                          <?php
+                            $scanned = scandir("../uploads/gallery/");
+                            foreach ($scanned as $file){
+                                echo "<option>$file<option>";
+                            }
+                          ?>
                         </select>
                     </div>
-                    <?php
-                    $scanned = scandir("../uploads/gallery/");
-                    print_r($scanned);
-                    ?>
-                    <div class="form-group ">
-                        <label for="exampleFormControlFile1 "><strong>Attach Image To Be Posted</strong></label>
-                        <input type="file " class="form-control-file " id="exampleFormControlFile1 ">
+                    <div class="form-group">
+                        <label for="exampleFormControlFile1"><strong>Attach Image To Be Posted</strong></label>
+                        <input type="file" class="form-control-file" id="exampleFormControlFile1" name="imgfile">
                     </div>
-                    <button type="submit " class="btn btn-primary ">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
-            <div class="w-50 ml-3 ">
-                <form action="./php/middlewares/albummiddleware.php " method="post ">
-                    <div class="form-group ">
-                        <label for="formGroupExampleInput "><strong>Create Image Album</strong></label>
-                        <input type="text " class="form-control shadow " id="formGroupExampleInput " placeholder="Name of the album to be created " name="albumname ">
+            <div class="w-50 ml-3">
+                <form action="./php/middlewares/albummiddleware.php" method="post">
+                    <div class="form-group">
+                        <label for="formGroupExampleInput"><strong>Create Image Album</strong></label>
+                        <input type="text" class="form-control shadow" id="formGroupExampleInput" placeholder="Name of the album to be created" name="albumname">
                     </div>
-                    <button type="submit " class="btn btn-primary ">Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
             </div>
         </div>
