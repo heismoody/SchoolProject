@@ -6,13 +6,13 @@ $(document).ready(function() {
         $("#bodydiv").load("./pages/aboutschool.html")
     });
     $("#gallery").click(function() {
-        $("#bodydiv").load("./pages/gallery.html")
+        $("#bodydiv").load("./pages/gallery.php")
     });
     $("#results").click(function() {
         $("#bodydiv").load("./pages/results.html")
     });
     $("#news").click(function() {
-        $("#bodydiv").load("./pages/news.html")
+        $("#bodydiv").load("./pages/news.php")
     });
     $("#login").click(function() {
         $("#bodydiv").load("./pages/login.html")

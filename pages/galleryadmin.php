@@ -31,12 +31,14 @@
                     <div class="form-group">
                         <label for="exampleFormControlSelect1"><strong>Choose Album To Post Image In</strong></label>
                         <select class="form-control shadow" id="exampleFormControlSelect1" name="albumname">
-                          <?php
-                            $scanned = scandir("../uploads/gallery/");
-                            foreach ($scanned as $file){
-                                echo "<option>$file<option>";
-                            }
-                          ?>
+                            <?php
+                                $scanned = array_diff(scandir("../uploads/gallery/"), array('..','.'));
+                                foreach ($scanned as $file){
+                            ?>
+                                <option><?php echo $file?><option>
+                            <?php
+                                }
+                            ?>
                         </select>
                     </div>
                     <div class="form-group">
