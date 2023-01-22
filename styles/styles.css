@@ -1,41 +1,52 @@
-.headfont{
+.headfont {
     font-weight: bold;
     font-size: 11px;
     line-height: 13px;
     margin: 0px 10px;
 }
 
-.navwid{
+.navwid {
     width: 85%;
 }
 
-.imagesize{
+.imagesize {
     width: 85%;
     height: 300px;
 }
 
-.inputcust{
+.inputcust {
     border: none;
     border-bottom: 2px solid;
 }
 
-.iconfb{
+.iconfb {
     color: blue;
 }
 
-.icontw{
+.icontw {
     color: rgb(95, 95, 255);
 }
 
-.iconadd{
+.iconadd {
     color: orangered;
 }
 
-.iconcal{
+.iconcal {
     color: rgb(0, 0, 101);
 }
 
-.iconsize{
-    width: 35px; 
-    height:35px;
+.iconsize {
+    width: 35px;
+    height: 35px;
+}
+
+.imageframe {
+    width: 100px;
+    height: 250px;
+}
+
+.respimg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
