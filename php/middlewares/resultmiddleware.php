@@ -6,7 +6,7 @@
 
     $fileext = explode('.', $filename);
     $fileactext = strtolower(end($fileext));
-    $allow = array("jpg","jpeg","png");
+    $allow = array("jpg","jpeg","png","docx");
 
     if(in_array($fileactext, $allow)){
         if($fileerror === 0){

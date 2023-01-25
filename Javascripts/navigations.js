@@ -23,4 +23,7 @@ $(document).ready(function() {
     $("#adminpanel").click(function() {
         $("#bodydiv").load("./pages/admindashboard.html")
     });
+    $("#applications").click(function() {
+        $("#bodydiv").load("./pages/applications.php")
+    });
 });

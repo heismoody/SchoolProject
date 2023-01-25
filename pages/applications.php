@@ -1,7 +1,7 @@
 <?php
     include '../php/connections/connection.php';
 
-    $sql = 'SELECT ID, EXAM_NAME FROM results';
+    $sql = 'SELECT * FROM applications';
     $results = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
@@ -21,14 +21,14 @@
     ?>
     <div class="d-flex justify-content-center w-100" style="background-color: rgb(233, 233, 233);">
         <div class="navwid">
-            <h2 class="font-weight-bold my-3">RESULTS</h2>
+            <h2 class="font-weight-bold my-3">APPLICATIONS</h2>
             <div class="w-100 py-4">
                 <ul>
                     <?php
-                        while($exams =  mysqli_fetch_assoc($results)){
+                        while($apps =  mysqli_fetch_assoc($results)){
                     ?>
                         <li id="classresult">
-                            <a href="./classresults.php?examname=<?php echo $exams["EXAM_NAME"]; ?>"><?php echo $exams["EXAM_NAME"]; $exams["ID"]?></a>
+                            <a href="./classresults.php?applicationname=<?php echo $apps["APP_NAME"]; ?>"><?php echo $exams["APP_NAME"]; $exams["ID"]?></a>
                         </li>
                     <?php
                         }
