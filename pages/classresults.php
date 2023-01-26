@@ -19,7 +19,7 @@
 </head>
 <body>
     <?php
-            include '../php/navigation.php';
+            include '../php/components/navigation.php';
     ?>
     <div class="d-flex justify-content-center w-100" style="background-color: rgb(233, 233, 233);">
         <div class="navwid">
@@ -39,6 +39,9 @@
             </div>
         </div>
     </div>
+    <?php
+        include '../php/components/footer.php'
+    ?>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"

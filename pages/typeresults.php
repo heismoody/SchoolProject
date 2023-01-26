@@ -17,34 +17,31 @@
 </head>
 <body>
     <?php
-        include '../php/navigation.php';
+        include '../php/components/navigation.php';
     ?>
-    <div class="d-flex justify-content-center w-100" style="background-color: rgb(233, 233, 233);">
-        <div class="navwid">
-            <h2 class="font-weight-bold my-3">RESULTS</h2>
-            <div class="w-100 py-4">
-                <ul>
-                    <?php
-                        while($exams =  mysqli_fetch_assoc($results)){
-                    ?>
-                        <li id="classresult">
-                            <a href="./classresults.php?examname=<?php echo $exams["EXAM_NAME"]; ?>"><?php echo $exams["EXAM_NAME"]; $exams["ID"]?></a>
-                        </li>
-                    <?php
-                        }
-                    ?>
-                </ul>
+        <div class="d-flex justify-content-center w-100" style="background-color: rgb(233, 233, 233);">
+            <div class="navwid">
+                <h2 class="font-weight-bold my-3">RESULTS</h2>
+                <div class="w-100 py-4">
+                    <ul>
+                        <?php
+                            while($exams =  mysqli_fetch_assoc($results)){
+                        ?>
+                            <li id="classresult">
+                                <a href="./classresults.php?examname=<?php echo $exams["EXAM_NAME"]; ?>"><?php echo $exams["EXAM_NAME"]; $exams["ID"]?></a>
+                            </li>
+                        <?php
+                            }
+                        ?>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-    <script src="../Javascripts/navigations.js"></script>
+    <?php
+        include '../php/components/footer.php'
+    ?>
+    <?php
+        include '../php/components/scripts.php'
+    ?>
 </body>
 </html>

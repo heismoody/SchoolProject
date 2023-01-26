@@ -15,7 +15,7 @@ $(document).ready(function() {
         $("#bodydiv").load("./pages/news.php")
     });
     $("#login").click(function() {
-        $("#bodydiv").load("./pages/login.html")
+        $("#bodydiv").load("./pages/login.php")
     });
     $("#teacherpanel").click(function() {
         $("#bodydiv").load("./pages/teacherpanel.html")
