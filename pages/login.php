@@ -21,7 +21,7 @@
 </head>
 <body>
     <?php
-        include '../php/navigation.php';
+        include '../php/components/navigation.php';
     ?>
     
     <div class="d-flex justify-content-center w-100 py-5" style="background-color: rgb(233, 233, 233);">
