@@ -4,7 +4,10 @@
         $password = $_POST['password'];
         
         if($username == 'administrator@mail.com'&& $password == 'testing'){
+            session_start();
+            $_SESSION["name"] = "administrator";
             header("Location: ./admindashboard.php");
+            exit();
         }
     }
 ?>

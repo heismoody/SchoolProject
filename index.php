@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,6 +74,16 @@
                         <li class="nav-item">
                             <a class="nav-link" id="teacherpanel">CONTACTS</a>
                         </li>
+                        <?php
+                            if(isset($_SESSION["name"])){
+                                echo '
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./pages/admindashboard.php">DASHBOARD</a>
+                                </li>
+                                ';
+                            }
+                            
+                        ?>
                     </ul>
                     <ul class="navbar-nav mr-5">
                         <li class="nav-item mr-3">

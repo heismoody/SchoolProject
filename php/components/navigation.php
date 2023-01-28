@@ -1,3 +1,6 @@
+    <?php
+        session_start();
+    ?>
     <header class="d-flex justify-content-center align-items-center" style="background-color: rgb(233, 233, 233);">
         <div class="navwid">
             <div class="d-flex justify-content-between mt-4 mb-3">
@@ -58,6 +61,15 @@
                         <li class="nav-item">
                             <a class="nav-link" id="teacherpanel">CONTACTS</a>
                         </li>
+                        <?php
+                            if(isset($_SESSION["name"])){
+                                echo '
+                                <li class="nav-item">
+                                    <a class="nav-link" href="../pages/admindashboard.php">DASHBOARD</a>
+                                </li>
+                                ';
+                            }
+                        ?>
                     </ul>
                     <ul class="navbar-nav mr-5">
                         <li class="nav-item mr-3">

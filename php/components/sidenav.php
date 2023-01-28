@@ -30,8 +30,8 @@
         </a>
     </div>
     <div>
-        <!-- <a href="../pages/admindashboard.php"> -->
+        <a href="../php/middlewares/logout.php">
             <img src="https://cdn4.iconfinder.com/data/icons/firefighting-fire-safety-blue-line/64/445_fire-exit-emergency-escape-evacuate-256.png" class="iconsize my-2" alt="">
-        <!-- </a> -->
+        </a>
     </div>
 </div>
