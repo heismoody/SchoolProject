@@ -23,7 +23,7 @@
                 </div>
                 <div class="w-100">
                     <div class="w-50">
-                        <form action="./php/middlewares/appmiddleware.php" method="post" enctype="multipart/form-data">
+                        <form action="../php/middlewares/appmiddleware.php" method="post" enctype="multipart/form-data">
                             <div class="form-group">
                                 <label for="formGroupExampleInput"><strong>Name Of The Application Form</strong></label>
                                 <input type="text" class="form-control shadow" id="formGroupExampleInput" placeholder="Applicaton Name" name="apptitle">
